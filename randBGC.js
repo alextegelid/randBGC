@@ -37,4 +37,4 @@ jQuery.fn.extend({
 			return 'rgb('+colors.join()+')';
 		}
 	}
-});jq
+});
