@@ -1,3 +1,4 @@
+/*
 The MIT License (MIT)
 
 Copyright (c) 2014 Alexander Tegelid
@@ -19,4 +20,21 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+ */
 
+jQuery.fn.extend({
+	randBGC: function(){
+		jQuery(this).each(function(index, el) {
+			var color = get_color();
+			jQuery(this).css('background-color', color);
+		});
+
+		function get_color() {
+			var colors = new Array();
+			for (var i = 0; i < 3; i++) {
+				colors[i] = Math.floor(Math.random()*255);
+			};
+			return 'rgb('+colors.join()+')';
+		}
+	}
+});jq
